@@ -24,6 +24,7 @@ body {
 .hero {
     width: 100vw;
     height: 100vh;
+    max-height: 100vh;
     background: #201e1f url('images/background.jpg') no-repeat right;
     background-size: contain;
 }
@@ -146,6 +147,7 @@ body {
     .hero {
         background: #201e1f url('images/background.jpg') no-repeat center;
         background-size: cover;
+        max-height: 100vh;
     }
 
     .hero-header {
