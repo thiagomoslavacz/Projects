@@ -15,6 +15,8 @@
 
 body {
     font-family: 'Ubuntu', sans-serif;
+    width: 100vw;
+    height: 100vh;
 }
 
 /* Hero */
@@ -78,7 +80,6 @@ body {
 
 .hero-main {
     width: 50vw;
-    height: 55vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -143,8 +144,8 @@ body {
 
 @media screen and (max-width: 768px) {
     .hero {
-        background: #201e1f url('images/background.jpg') no-repeat bottom;
-        background-size: contain;
+        background: #201e1f url('images/background.jpg') no-repeat center;
+        background-size: cover;
     }
 
     .hero-header {
@@ -156,6 +157,7 @@ body {
 
     .header-nav i {
         display: block;
+        background-color: rgba(0, 0, 0, 0.6);
     }
 
     .header-nav ul {
@@ -164,10 +166,10 @@ body {
 
     .hero-main {
         width: 100vw;
+        padding: 50px 0;
         padding-left: 20px;
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
+        display: inline-block;
+        background-color: rgba(0, 0, 0, 0.6);
     }
 
     .main-content h1 {
