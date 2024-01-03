@@ -7,6 +7,16 @@
     box-sizing: border-box;
 }
 
+@keyframes levitate {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-50%);
+    }
+}
+
 hr {
     width: 90vw;
     margin: auto;
@@ -111,4 +121,41 @@ hr {
 .page {
     width: 80vw;
     margin: auto;
+}
+
+.portfolio {
+    margin-top: 150px;
+    display: flex;
+    gap: 50px;
+}
+
+.portfolio .content .info {
+    display: inline-block;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: rgb(231, 231, 231);
+    color: gray;
+}
+
+.portfolio .content .text h2 {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.portfolio .content .text p {
+    margin-bottom: 20px;
+}
+
+.portfolio .content .link {
+    margin-top: 62px;
+    animation: levitate 2s ease-in-out infinite;
+}
+
+.portfolio .content .link a {
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 15px 20px;
 }
