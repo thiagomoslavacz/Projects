@@ -6,3 +6,109 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+hr {
+    width: 90vw;
+    margin: auto;
+}
+
+.hero {
+    height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    transition: all 0.3s;
+}
+
+.header:hover {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header .logo,
+.header .links {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    gap: 20px;
+}
+
+.logo i {
+    color: black;
+    font-size: 2.5rem;
+}
+
+.links {
+    font-size: 1.2rem;
+    gap: 30px;
+}
+
+.links a {
+    color: black;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.links a:hover {
+    transform: translateY(-5px);
+}
+
+/* PROFILE */
+
+.profile {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /*
+    background-color: #F9F9F9;
+    */
+}
+
+.profile .name h1 {
+    font-size: 4.5rem;
+    margin-bottom: 10px;
+}
+
+.profile .name p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+
+.profile .social {
+    font-size: 2rem;
+    display: flex;
+    gap: 20px;
+}
+
+.profile .social a {
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    border: 2px solid transparent;
+    display: flex;
+    padding: 5px;
+    transition: all 0.3s;
+}
+
+.profile .social a:hover {
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+}
+
+.profile-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 0 50% 0 0;
+}
+
+.page {
+    width: 80vw;
+    margin: auto;
+}
