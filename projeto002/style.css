@@ -364,6 +364,10 @@ hr {
         flex-direction: column;
     }
 
+    .portfolio img {
+        width: 300px;
+    }
+
     .services .content {
         flex-direction: column;
         gap: 70px;
