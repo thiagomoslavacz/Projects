@@ -7,13 +7,23 @@
     box-sizing: border-box;
 }
 
-@keyframes levitate {
+@keyframes levitate1 {
     0%, 100% {
         transform: translateY(0);
     }
 
     50% {
         transform: translateY(-50%);
+    }
+}
+
+@keyframes levitate2 {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(25%);
     }
 }
 
@@ -124,7 +134,7 @@ hr {
 }
 
 .portfolio {
-    margin-top: 150px;
+    margin: 150px 0;
     display: flex;
     gap: 50px;
 }
@@ -150,7 +160,7 @@ hr {
 
 .portfolio .content .link {
     margin-top: 62px;
-    animation: levitate 2s ease-in-out infinite;
+    animation: levitate1 2s ease-in-out infinite;
 }
 
 .portfolio .content .link a {
@@ -158,4 +168,147 @@ hr {
     color: white;
     background-color: black;
     padding: 15px 20px;
+    transition: all 0.3s;
+}
+
+.portfolio .content .link a:hover {
+    opacity: 0.8;
+}
+
+.services {
+    margin-bottom: 150px;
+}
+
+.services > .info {
+    display: inline-block;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: rgb(231, 231, 231);
+    color: gray;
+}
+
+.services .content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content .itens .info {
+    font-size: 1.7rem;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.info i {
+    font-size: 3rem;
+}
+
+.content .itens {
+    width: 350px;
+    border: 1px solid black;
+}
+
+.itens .text {
+    padding: 20px;
+}
+
+.itens .html { color: #FF5C29; }
+
+.itens .css { color: #3D9DD7; }
+
+.itens .javascript { color: #F7E025; }
+
+.projects > .info {
+    display: inline-block;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: rgb(231, 231, 231);
+    color: gray;
+}
+
+.projects .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.projects .itens {
+    margin-bottom: 70px;
+}
+
+.content .itens .img {
+    overflow: hidden;
+}
+
+.content img {
+    width: 100%;
+    height: auto;
+    transition: all 0.5s;
+    vertical-align: bottom;
+}
+
+.content img:hover {
+    transform: scale(1.1);
+}
+
+.projects .itens .content {
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+.projects .itens .content h3 {
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+}
+
+.projects .itens .content a {
+    color: white;
+    background-color: black;
+    text-decoration: none;
+    padding: 15px 30px;
+    margin-top: 20px;
+    transition: all 0.3s;
+}
+
+.projects .itens .content a:hover {
+    opacity: 0.8;
+}
+
+.projects .top {
+    margin-bottom: 70px;
+    text-align: center;
+}
+
+.top a {
+    border-radius: 50%;
+    color: white;
+    background-color: black;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-flex;
+    animation: levitate2 3s ease-in-out infinite;
+    transition: all 0.5s;
+}
+
+.top a:hover {
+    opacity: 0.8;
+}
+
+.top i {
+    font-size: 3rem;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 100px 0;
+    font-size: 1.3rem;
+}
+
+.footer .logo i {
+    font-size: 4rem;
+    color: white;
 }
