@@ -200,7 +200,11 @@ hr {
 
 .services .content {
     display: flex;
-    justify-content: space-between;
+    gap: 50px;
+}
+
+.content .itens {
+    border: 1px solid black;
 }
 
 .content .itens .info {
@@ -212,11 +216,6 @@ hr {
 
 .info i {
     font-size: 3rem;
-}
-
-.content .itens {
-    width: 350px;
-    border: 1px solid black;
 }
 
 .itens .text {
@@ -241,6 +240,11 @@ hr {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+
+.projects .itens {
+    width: 350px;
+    border: 1px solid black;
 }
 
 .projects .itens {
