@@ -1,3 +1,5 @@
+/* CONFIG. */
+
 @charset "UTF-8";
 
 * {
@@ -5,6 +7,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+:root {
+    --transition: all 0.3s;
 }
 
 html {
@@ -31,118 +37,135 @@ html {
     }
 }
 
+/* BODY */
+
+/* SOLO TAG'S */
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
 hr {
     width: 90vw;
     margin: auto;
 }
 
+.info {
+    display: inline-block;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: rgb(231, 231, 231);
+    color: gray;
+}
+
+/* HERO */
 .hero {
     height: 100vh;
 }
 
-.header {
+.hr-header {
     display: flex;
     justify-content: space-between;
     padding: 30px;
     transition: all 0.3s;
 }
 
-.header:hover {
+.hr-header:hover {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.header .logo,
-.header .links {
+.hr-header .hd-logo,
+.hr-header .header-links {
     display: flex;
     align-items: center;
 }
 
-.logo {
+.hr-header .hd-logo {
     font-size: 1.5rem;
     gap: 20px;
 }
 
-.logo i {
+.hr-header .hd-logo i {
     color: black;
     font-size: 2.5rem;
 }
 
-.links {
+.hr-header .hd-links {
     font-size: 1.2rem;
+    display: flex;
+    align-items: center;
     gap: 40px;
 }
 
-.links i {
+.hr-header .hd-links i {
+    display: none;
     font-size: 2rem;
     cursor: pointer;
 }
 
-.links a {
+.hr-header .hd-links a {
     color: black;
-    text-decoration: none;
-    transition: all 0.3s;
 }
 
-.links a:hover {
+.hr-header .hd-links a:hover {
     transform: translateY(-5px);
 }
 
-/* PROFILE */
-
-.profile {
+.hr-profile {
     width: 80vw;
     margin: auto;
     margin-top: 80px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    /*
-    background-color: #F9F9F9;
-    */
 }
 
-.profile .name h1 {
+.pf-content .pf-name h1 {
     font-size: 4.5rem;
     margin-bottom: 10px;
 }
 
-.profile .name p {
+.pf-content .pf-name p {
     font-size: 1.3rem;
     margin-bottom: 30px;
 }
 
-.profile .social {
+.pf-content .pf-social {
     font-size: 2rem;
     display: flex;
     gap: 20px;
 }
 
-.profile .social a {
-    text-decoration: none;
+.pf-content .pf-social a {
     color: white;
     background-color: black;
     border: 2px solid transparent;
     display: flex;
     padding: 5px;
-    transition: all 0.3s;
 }
 
-.profile .social a:hover {
+.pf-content .pf-social a:hover {
     color: black;
     background-color: white;
     border: 2px solid black;
 }
 
-.profile-img img {
+.hr-profile .pf-img img {
     width: 100%;
     height: auto;
     border-radius: 0 50% 0 0;
 }
 
+/* PAGE */
+
 .page {
     width: 80vw;
     margin: auto;
 }
+
+/* PORTFOLIO */
 
 .portfolio {
     margin: 150px 0;
@@ -150,146 +173,125 @@ hr {
     gap: 50px;
 }
 
-.portfolio .content .info {
-    display: inline-block;
-    padding: 10px;
-    margin-bottom: 20px;
-    background-color: rgb(231, 231, 231);
-    color: gray;
-}
-
-.portfolio .content .text h2 {
+.portfolio .pt-content .pt-text h2 {
     display: flex;
     flex-wrap: wrap;
     font-size: 2.5rem;
     margin-bottom: 30px;
 }
 
-.portfolio .content .text p {
+.portfolio .pt-content .pt-text p {
     margin-bottom: 20px;
 }
 
-.portfolio .content .link {
+.portfolio .pt-content .pt-link {
     margin-top: 62px;
     animation: levitate1 2s ease-in-out infinite;
 }
 
-.portfolio .content .link a {
-    text-decoration: none;
+.portfolio .pt-content .pt-link a {
     color: white;
     background-color: black;
     padding: 15px 20px;
-    transition: all 0.3s;
 }
 
-.portfolio .content .link a:hover {
+.portfolio .pt-content .pt-link a:hover {
     opacity: 0.8;
 }
+
+/* SERVICES */
 
 .services {
     margin-bottom: 150px;
 }
 
-.services > .info {
-    display: inline-block;
-    padding: 10px;
-    margin-bottom: 20px;
-    background-color: rgb(231, 231, 231);
-    color: gray;
-}
-
-.services .content {
+.services .sv-content {
     display: flex;
     gap: 50px;
 }
 
-.content .itens {
+.sv-content .sv-itens {
     border: 1px solid black;
 }
 
-.content .itens .info {
+.sv-itens .sv-info {
     font-size: 1.7rem;
     text-align: center;
     padding: 20px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-.info i {
+.sv-info i {
     font-size: 3rem;
 }
 
-.itens .text {
+.sv-itens .sv-text {
     padding: 20px;
 }
 
-.itens .html { color: #FF5C29; }
+.sv-itens .html { color: #FF5C29; }
 
-.itens .css { color: #3D9DD7; }
+.sv-itens .css { color: #3D9DD7; }
 
-.itens .javascript { color: #F7E025; }
+.sv-itens .javascript { color: #F7E025; }
 
-.projects > .info {
-    display: inline-block;
-    padding: 10px;
-    margin-bottom: 20px;
-    background-color: rgb(231, 231, 231);
-    color: gray;
-}
+/* PROJECTS */
 
-.projects .content {
+.projects .pj-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.projects .itens {
+.pj-content .pj-itens {
     width: 350px;
     border: 1px solid black;
-}
-
-.projects .itens {
     margin-bottom: 70px;
 }
 
-.content .itens .img {
+.pj-itens .pj-img {
     overflow: hidden;
 }
 
-.content img {
+.pj-img img {
     width: 100%;
     height: auto;
     transition: all 0.5s;
     vertical-align: bottom;
 }
 
-.content img:hover {
+.pj-img img:hover {
     transform: scale(1.1);
 }
 
-.projects .itens .content {
+.pj-itens .pj-text {
     border-top: 1px solid rgba(0, 0, 0, 0.2);
     padding: 20px;
 }
 
-.projects .itens .content h3 {
+.pj-itens .pj-text h3 {
     font-size: 1.7rem;
     margin-bottom: 10px;
 }
 
-.projects .itens .content a {
-    color: white;
-    background-color: black;
-    text-decoration: none;
-    padding: 15px 30px;
-    margin-top: 20px;
-    transition: all 0.3s;
+.pj-itens .pj-text p {
+    margin-bottom: 20px;
 }
 
-.projects .itens .content a:hover {
+.pj-itens .pj-text a {
+    display: inline-block;
+    color: white;
+    background-color: black;
+    padding: 15px 30px;
+}
+
+.pj-itens .pj-text a:hover {
     opacity: 0.8;
 }
 
-.projects .top {
+/* BUTTON TO TOP */
+
+.top {
     margin-bottom: 70px;
     text-align: center;
 }
@@ -298,7 +300,6 @@ hr {
     border-radius: 50%;
     color: white;
     background-color: black;
-    text-decoration: none;
     padding: 10px;
     display: inline-flex;
     animation: levitate2 3s ease-in-out infinite;
@@ -313,6 +314,8 @@ hr {
     font-size: 3rem;
 }
 
+/* FOOTER */
+
 .footer {
     background-color: black;
     color: white;
@@ -323,63 +326,56 @@ hr {
     font-size: 1.3rem;
 }
 
-.footer .logo i {
+.footer .ft-logo i {
     font-size: 4rem;
     color: white;
 }
 
+/* MEDIA QUERIE */
+
 @media screen and (max-width: 768px) {
-    .header .logo {
-        font-size: 1.3rem;
-    }
-
-    .header .logo i {
-        font-size: 2rem;
-    }
-
-    .header .links a {
-        display: none;
-    }
-
-    .profile {
+    hr {
         margin-top: 50px;
+    }
+
+    .hr-header .hd-logo { font-size: 1.3rem; }
+
+    .hr-header .hd-logo i { font-size: 2rem; }
+
+    .hr-header .hd-links a { display: none; }
+
+    .hr-header .hd-links i { display: block; }
+
+    .hr-profile {
+        margin-top: 40px;
         flex-direction: column-reverse;
         align-items: flex-start;
     }
 
-    .profile img {
-        width: 300px;
-    }
+    .hr-profile .pf-img img { width: 300px; }
 
-    .profile .content .name h1{
+    .pf-content .pf-name h1 {
         margin-top: 20px;
         font-size: 2.5rem;
     }
 
-    .profile .content .name p {
-        font-size: 1rem;
-    }
+    .pf-content .pf-name p { font-size: 1.2rem; }
 
-    .profile .social {
-        font-size: 1.8rem;
-    }
+    .pf-content .pf-social { font-size: 1.8rem; }
 
     .portfolio {
         flex-direction: column;
+        margin-top: 100px;
     }
 
-    .portfolio img {
-        width: 300px;
-    }
+    .portfolio img { width: 300px; }
 
-    .services .content {
+    .services .sv-content {
         flex-direction: column;
         gap: 70px;
     }
 
-    .top i {
-        font-size: 2.5rem;
-    }
+    .top i { font-size: 2.5rem; }
 
     .footer {
         flex-direction: column;
