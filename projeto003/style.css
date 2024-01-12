@@ -2,10 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 
 :root {
+    /* 730 581 */
     --title-font: 'Satisfy', cursive;
 
     --button-color: #0095F6;
     --button-color-hover: #1877F2;
+    --facebook-color: #385185;
     --footer-color: #737373;
 }
 
