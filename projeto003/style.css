@@ -21,8 +21,7 @@
 }
 
 body {
-    height: 100vh;
-}
+    }
 
 a {
     text-decoration: none;
@@ -68,11 +67,15 @@ a {
 }
 
 .container .form .forms input {
-    padding: 10px;
+    padding: 12px;
     background-color: #FAFAFA;
     border: 1px solid var(--border-color);
     outline: none;
     font-size: 0.75rem;
+}
+
+.container .form .forms input:focus {
+    border: 1px solid #848484;
 }
 
 .container .form .forms button {
@@ -131,6 +134,10 @@ a {
     gap: 8px;
 }
 
+.container .form .forms .facebook .login-facebook p {
+    line-height: 2px;
+}
+
 .container .form .forms .facebook .login-facebook i {
     display: flex;
     font-size: 25px;
@@ -166,19 +173,17 @@ a {
     gap: 8px;
 }
 
+.container .form .app .links img {
+    cursor: pointer;
+}
+
 footer {
     color: #737373;
-    margin-top: 4rem;
+    margin: 4rem 0;
+    padding: 0 20px;
 }
 
-footer .line1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 20px;
-}
-
+footer .line1,
 footer .line2 {
     display: flex;
     justify-content: center;
@@ -186,6 +191,40 @@ footer .line2 {
     gap: 12px;
 }
 
+footer .line1 {
+    margin-bottom: 20px;
+}
+
+footer .line2 p {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
 footer p {
     font-size: .8rem;
+}
+
+@media screen and (max-width: 1535px) {
+    .container .form .forms .separator::after,
+    .container .form .forms .separator::before {
+        border: none;
+    }
+}
+
+@media screen and (max-width: 870px) {
+    .container .img {
+        display: none;
+    }
+
+    footer .line1 {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container .form .forms,
+    .container .form .register {
+        border: none;
+    }
 }
