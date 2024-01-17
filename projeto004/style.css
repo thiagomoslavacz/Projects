@@ -118,39 +118,6 @@ html {
     margin-right: 4px;
 }
 
-.words {
-    grid-column: 1 / 7;
-    display: flex;
-    gap: 100px;
-    font-size: 1.2rem;
-    padding: 20px 0;
-}
-
-.words p:nth-child(1) { transform: rotate(25deg); color: yellow; }
-.words p:nth-child(2) { transform: rotate(-15deg); color: fuchsia; animation: levitate 2s linear infinite; }
-.words p:nth-child(3) { transform: rotate(35deg); color: lawngreen; }
-.words p:nth-child(4) { color: red; animation: levitate 3s linear infinite; }
-
-@keyframes levitate {
-    0% {
-        transform: translateY(0);
-    }
-
-    25% {
-        transform: translateY(-60%);
-    }
-
-    75% {
-        transform: translateY(60%);
-    }
-
-    100% {
-        transform: translateY(0%);
-    }
-
-
-}
-
 @media screen and (max-width: 768px) {
     .header {
         padding: 20px 50px;
