@@ -9,7 +9,6 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-    width: 100vw;
 }
 
 .header-nav {
@@ -97,17 +96,122 @@ body {
 }
 
 .header .menu {
+    border: none;
+    background-color: #C4170C;
     text-decoration: none;
     color: white;
     padding: 25px 0;
     display: flex;
     align-items: center;
     gap: 4px;
+    font-size: 20px;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .header .menu i {
+    font-size: 25px;
+}
+
+body.body-scroll-lock {
+    overflow: hidden;
+}
+
+.menu-window-active {
+    display: none;
+}
+
+.menu-window-active .menu-nav {
+    width: 300px;
+    max-height: 100vh;
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    overflow-y: scroll;
+    background-color: white;
+    padding: 30px 0 0 25px;
     font-size: 20px;
+}
+
+.menu-window-active .menu-nav ul {
+    margin-bottom: 50px;
+    list-style: none;
+    color: gray;
+}
+
+.menu-window-active .menu-nav ul:nth-child(1) li:last-child {
+    padding-bottom: 50px;
+    border-bottom: 2px solid lightgray;
+}
+
+.menu-window-active .menu-nav ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.menu-window-active .menu-nav ul i {
+    display: flex;
+    align-items: center;
+    color: #C4170C;
+}
+
+.menu-window-active .menu-nav .account {
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.menu-window-active .menu-nav .account .text p {
+    color: #C4170C;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 3px;
+}
+
+.menu-window-active .menu-nav .account .text span {
+    font-size: 12px;
+    color: gray;
+}
+
+.menu-window-active .menu-nav .account i {
+    margin: 0 10px 15px 0;
+    font-size: 25px;
+    color: gray;
+}
+
+.menu-window-active .menu-nav .globo {
+    padding-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu-window-active .menu-nav .globo p {
+    color: gray;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.menu-window-active .menu-nav .globo i {
+    font-size: 25px;
+    color: gray;
+}
+
+.menu-window-active .menu-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: .5;
+    background-color: black;
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
 }
 
 .header .title {
@@ -408,16 +512,33 @@ body {
 
     .header {
         font-size: 16px;
-        padding: 0 20px;
+        padding: 0 10px;
     }
 
     .header .menu {
         padding: 20px 0;
     }
 
+    .header .menu i {
+        font-size: 30px;
+    }
+
+    .header .menu span {
+        display: none;
+    }
+
+    .menu-window-active .menu-nav {
+        padding: 25px 20px;
+        width: 70vw;
+        font-size: 18px;
+    }
+
+    .menu-window-active .menu-nav .account .text p {
+        line-height: 10px;
+    }
+
     .header .title {
         margin: 0;
-        margin-right: 30px;
     }
 
     .header .search input {
@@ -461,7 +582,9 @@ body {
     }
 
     .wrapper01 .news01 .first-section .text h1 {
-        font-size: 1.7rem;
+        font-size: 1.9em;
+        line-height: 35px;
+        margin-bottom: 25px;
     }
 
     .wrapper01 .news01 .first-section .text ul {
@@ -507,6 +630,10 @@ body {
         font-size: 23px;
     }
 
+    .wrapper02 .news .section .content li {
+        font-size: 10px;
+    }
+
     .wrapper02 .news img {
         border-radius: 0;
         width: 100%;
@@ -539,7 +666,7 @@ body {
         display: flex;
         flex-direction: column;
         padding: 20px 30px;
-        border: none;
+        border-right: 1px solid lightgray;
     }
 
     .wrapper02 .aside .content h2 {
