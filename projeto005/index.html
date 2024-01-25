@@ -29,10 +29,10 @@
     </header>
 
     <header class="header">
-        <button class="menu" onclick="toggleMenu()"><i class="bx bx-menu"></i><span>Menu</span></button>
+        <button class="menu" onclick="openMenu()"><i class="bx bx-menu"></i><span>Menu</span></button>
         <a class="title" href="index.html">g1</a>
         <div class="search">
-            <label for="search"><i class='bx bx-search' ></i></label>
+            <label id="search-btn" for="search"><i class='bx bx-search' ></i></label>
             <input type="text" id="search" autocomplete="off" placeholder="Buscar">
         </div>
     </header>
@@ -179,7 +179,7 @@
         </div>
         <div class="links">
             <div class="copy">
-                <p><i class='bx bx-copyright'></i></p>
+                <i class='bx bx-copyright'></i>
                 <p>g1 | Recriado por thiagomoslavacz</p>
             </div>
             <ul>

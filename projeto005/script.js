@@ -1,4 +1,4 @@
-function toggleMenu() {
+function openMenu() {
     var menuWindow = document.getElementById('menu-window-active');
     var menuBackground = document.querySelector('.menu-background');
     var body = document.body;
@@ -19,5 +19,5 @@ function toggleMenu() {
 }
 
 function closeMenu() {
-    toggleMenu();
+    openMenu();
 }

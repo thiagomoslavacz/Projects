@@ -100,7 +100,7 @@ body {
     background-color: #C4170C;
     text-decoration: none;
     color: white;
-    padding: 25px 0;
+    padding: 20px 0;
     display: flex;
     align-items: center;
     gap: 4px;
@@ -123,7 +123,7 @@ body.body-scroll-lock {
 
 .menu-window-active .menu-nav {
     width: 300px;
-    max-height: 100vh;
+    max-height: 100svh;
     overflow-y: auto;
     position: fixed;
     top: 0;
@@ -222,13 +222,12 @@ body.body-scroll-lock {
     font-weight: 700;
     letter-spacing: -3px;
     margin-left: 80px;
+    padding-bottom: 7px;
 }
 
 .header .search {
     color: white;
     display: flex;
-    gap: 3px;
-    padding-left: 8px;
 }
 
 .header .search,
@@ -240,13 +239,14 @@ body.body-scroll-lock {
 .header .search label {
     display: flex;
     align-items: center;
+    padding: 0 10px;
 }
 
 .header .search input {
     outline: none;
     width: 120px;
-    height: 25px;
-    padding: 0 5px;
+    height: 30px;
+    text-indent: 5px;
     transition: all 0.3s ease;
 }
 
@@ -309,7 +309,7 @@ body.body-scroll-lock {
 
 .wrapper01 .news01 .first-section .text h1 {
     font-size: 2.5rem;
-    line-height: 50px;
+    line-height: 45px;
     margin-bottom: 10px;
 }
 
@@ -342,6 +342,7 @@ body.body-scroll-lock {
 .wrapper01 .news01 .second-section h1,
 .wrapper01 .news01 .third-section h1 {
     font-size: 2rem;
+    line-height: 35px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
@@ -387,7 +388,6 @@ body.body-scroll-lock {
 
 .wrapper02 .news .section .content ul {
     list-style: none;
-    font-size: 14px;
     color: #C4170C;
 }
 
@@ -395,7 +395,7 @@ body.body-scroll-lock {
     padding: 10px 0 0 0;
 }
 
-.wrapper02 .news .section .content p {
+.wrapper02 .news .section .data {
     font-size: 13px;
     padding-top: 10px;
     color: rgb(109, 109, 109);
@@ -410,12 +410,17 @@ body.body-scroll-lock {
     background-color: #C4170C;
     margin: 40px 0 0 0;
     padding: 15px 0;
-    border-radius: 10px;
+    border-radius: 15px;
     color: white;
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 600;
     cursor: pointer;
+    transition: transform .3s;
+}
+
+.wrapper02 .news .more:active {
+    transform: scale(.95);
 }
 
 .wrapper02 .aside {
@@ -541,6 +546,11 @@ body.body-scroll-lock {
         margin: 0;
     }
 
+    .header .search label {
+        padding: 0;
+        cursor: pointer;
+    }
+
     .header .search input {
         display: none;
     }
@@ -623,7 +633,7 @@ body.body-scroll-lock {
 
     .wrapper02 .news .section .content {
         margin: 0;
-        padding: 10px 0 10px 10px;
+        padding: 10px 0 0 10px;
     }
 
     .wrapper02 .news .section .content h2 {
@@ -631,12 +641,17 @@ body.body-scroll-lock {
     }
 
     .wrapper02 .news .section .content li {
-        font-size: 10px;
+        font-size: 16px;
+    }
+
+    .wrapper02 .news .section .content p:nth-child(3) {
+        margin-top: 10px;
     }
 
     .wrapper02 .news img {
         border-radius: 0;
         width: 100%;
+        vertical-align: bottom;
     }
 
     .wrapper02 .news .more {
