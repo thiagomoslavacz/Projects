@@ -98,19 +98,21 @@ a {
 .container .form .forms .separator::before {
     content: '';
     position: absolute;
+    background-color: var(--border-color);
     width: 8%;
-    border-top: 1.5px solid var(--border-color);
-    margin-left: 2%;
-    margin-top: .5%;
+    height: 1px;
+    right: 27.5%;
+    bottom: 53.7%;
 }
 
 .container .form .forms .separator::after {
     content: '';
     position: absolute;
+    background-color: var(--border-color);
     width: 8%;
-    border-top: 1.5px solid var(--border-color);
-    left: 54%;
-    margin-top: .5%;
+    height: 1px;
+    left: 54.5%;
+    bottom: 53.7%;
 }
 
 .container .form .forms .facebook {
@@ -202,9 +204,9 @@ footer p {
 }
 
 @media screen and (max-width: 1535px) {
-    .container .form .forms .separator::after,
-    .container .form .forms .separator::before {
-        border: none;
+    .separator::after,
+    .separator::before {
+        display: none;
     }
 }
 
