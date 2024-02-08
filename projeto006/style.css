@@ -3,6 +3,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Rochester&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
+:root {
+  --normal: Arial, Helvetica, sans-serif;
+  --poppins: "Poppins", sans-serif;
+  --calligraffitti: "Calligraffitti", cursive;
+  --rochester: "Rochester", cursive;
+
+  --main-background: #131515;
+  --backgrounds: #080708;
+
+  --paragraphs: #ced4da;
+
+  --red01: #d00000;
+  --red02: #9d0208;
+  --red03: #6a040f;
+  --red04: #370617;
+}
+
 * {
   margin: 0;
   padding: 0;
