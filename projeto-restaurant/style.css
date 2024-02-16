@@ -175,7 +175,7 @@ a {
 }
 
 .separator {
-  margin: 7% 0 2% 0;
+  margin: 6% 0 2% 0;
   text-align: center;
 }
 
@@ -196,18 +196,32 @@ a {
 }
 
 #highlights {
-  padding: 0 50px;
+  padding: 50px;
 }
 
 #highlights .container {
   color: white;
-  padding: 20px;
   background: black url("images/backgrounds/highlights-background.jpg")
     no-repeat center;
   background-size: cover;
+}
+
+#highlights .container .favorites {
+  padding: 20px;
+  padding-bottom: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
+}
+
+#highlights .container > p {
+  text-align: end;
+  padding: 20px 0;
+  padding-right: 20px;
+
+  & span {
+    color: var(--red01);
+  }
 }
 
 #highlights .container .single {
@@ -275,10 +289,16 @@ a {
 }
 
 #highlights .container .single .content .rate {
-  margin: 8px 0;
+  margin: 15px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+#highlights .container .single .content .rate .stars {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 #highlights .container .single .content .rate .stars i {
@@ -301,4 +321,175 @@ a {
   height: 100%;
   margin: 0 auto;
   display: block;
+}
+
+/* MENU */
+
+.menu-separator {
+  background-color: #faf5f0;
+  margin: 6% 0 0 0;
+  padding: 2% 0;
+}
+
+#menu {
+  padding: 0 100px;
+  background-color: #faf5f0;
+}
+
+#menu .options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 50px;
+  margin-bottom: 5%;
+}
+
+#menu .options .option {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  padding: 30px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#menu .options .option i {
+  color: var(--red01);
+  font-size: 50px;
+}
+
+#menu .options .option span {
+  font-size: 20px;
+}
+
+#menu .options .option:hover {
+  background-color: var(--red01);
+}
+
+#menu .options .option:hover i,
+#menu .options .option:hover span {
+  color: white;
+}
+
+/* --------------- */
+
+#menu {
+  & #steaks {
+    display: none;
+  }
+
+  & #chickens {
+    display: none;
+  }
+
+  & #doughs {
+    display: none;
+  }
+
+  & #salads {
+    display: none;
+  }
+
+  & #drinks {
+    display: none;
+  }
+
+  & #desserts {
+    display: none;
+  }
+}
+
+#menu .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+#menu .container .option {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+#menu .container .option .content {
+  padding: 0 20px;
+  width: 100%;
+}
+
+#menu .container .option .content .price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#menu .container .option .price h4 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#menu .container .option .price h4::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 110px;
+  height: 1px;
+  margin-left: 10px;
+  margin-top: 15px;
+  background-color: rgba(128, 128, 128, 0.5);
+}
+
+#menu .container .option .price span {
+  font-family: var(--rochester);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--red01);
+}
+
+#menu .container .option p {
+  font-size: 14px;
+}
+
+#menu .container img {
+  width: 200px;
+  height: 100%;
+}
+
+/* ------------- */
+
+#menu .special-container .cover {
+  color: white;
+  text-align: center;
+  background: black no-repeat center;
+  background-size: cover;
+}
+
+#menu .special-container .cover .background {
+  padding: 100px 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  & h2 {
+    font-size: 40px;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 1);
+  }
+
+  & i {
+    color: var(--red01);
+    font-size: 20px;
+  }
+}
+
+#menu .special-container .cv-drinks {
+  background-image: url("images/backgrounds/background-drink.jpg");
+}
+
+#menu .special-container .cv-desserts {
+  background-image: url("images/desserts/dessert03.jpg");
 }
