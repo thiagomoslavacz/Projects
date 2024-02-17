@@ -159,7 +159,7 @@ a {
 #hero .title h1 {
   font-family: var(--rochester);
   font-weight: 500;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
   font-size: 130px;
 }
 
@@ -171,28 +171,27 @@ a {
 #hero .title a i {
   display: block;
   font-size: 20px;
+  line-height: 10px;
   animation: levitating 3s forwards infinite;
 }
 
 .separator {
-  margin: 6% 0 2% 0;
+  margin-top: 8%;
   text-align: center;
-}
-
-.separator h3 {
-  margin-top: 10px 0;
-  padding-bottom: 15px;
-  font-size: 16px;
-}
-
-.separator i {
-  font-size: 25px;
 }
 
 .separator h2 {
   color: var(--red01);
   font-family: var(--rochester);
   font-size: 85px;
+}
+
+.separator h3 {
+  margin: 10px 0 20px 0;
+}
+
+.separator i {
+  font-size: 25px;
 }
 
 #highlights {
@@ -208,7 +207,6 @@ a {
 
 #highlights .container .favorites {
   padding: 20px;
-  padding-bottom: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
@@ -327,7 +325,6 @@ a {
 
 .menu-separator {
   background-color: #faf5f0;
-  margin: 6% 0 0 0;
   padding: 2% 0;
 }
 
@@ -338,7 +335,7 @@ a {
 
 #menu .options {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 50px;
 }
 
@@ -362,6 +359,15 @@ a {
   font-size: 20px;
 }
 
+#menu .options .selected {
+  background-color: var(--red01);
+  color: white;
+
+  & i {
+    color: white;
+  }
+}
+
 #menu .options .option:hover {
   background-color: var(--red01);
 }
@@ -374,6 +380,10 @@ a {
 /* --------------- */
 
 #menu {
+  & #servings {
+    display: grid;
+  }
+
   & #steaks {
     display: none;
   }
@@ -450,7 +460,7 @@ a {
 }
 
 #menu .container .option p {
-  font-size: 14px;
+  font-size: 15px;
 }
 
 #menu .container img {
@@ -463,10 +473,10 @@ a {
 #menu .special-container {
   & .cover {
     color: white;
-    text-align: center;
-    background: black no-repeat center;
+    background: black no-repeat 100%;
+    border: 1px solid black;
     background-size: cover;
-    margin-bottom: 20px;
+    margin-bottom: 20px 0;
 
     & .background {
       padding: 80px 0;
@@ -495,77 +505,108 @@ a {
   }
 
   & .cv-desserts {
-    background-image: url("images/desserts/dessert02.jpg");
+    background-image: url("images/backgrounds/background-desserts.jpg");
   }
 
   & .menu {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    padding: 20px;
-    border: 1px solid black;
-    color: white;
+    padding: 20px 0;
+    margin-bottom: 5%;
 
     & .content {
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 10px;
       border: 1px solid black;
+      background-color: white;
+
+      & .price {
+        padding: 20px;
+      }
 
       & h4 {
         font-size: 30px;
-
-        & span.d1 {
-          color: pink;
-        }
-
-        & span.d2 {
-          color: #f26a07;
-        }
+        margin-bottom: 10px;
       }
+    }
+  }
 
-      & h4.ob-title {
-        background: linear-gradient(
-          to right,
-          gold,
-          red,
-          limegreen,
-          blue,
-          white,
-          white,
-          white,
-          white,
-          white,
-          white,
-          white
-        );
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-      }
+  & .drinks-menu {
+    & span.b1 {
+      color: rgb(255, 70, 255);
+    }
 
-      & p {
-      }
+    & span.b2 {
+      color: #f26a07;
     }
 
     & .openbar {
       grid-column: span 2;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      align-items: center;
-      gap: 20px;
-    }
+      text-align: center;
 
-    & img {
-      width: 100%;
-      height: auto;
-    }
-  }
+      & .price {
+        background: url("images/backgrounds/openbar-background.jpg") no-repeat
+          100%;
+        background-size: cover;
+        padding: 0;
+        color: white;
 
-  & .drinks-menu {
-    background: linear-gradient(-135deg, yellow, orange, salmon, #ff1067);
+        & .background {
+          background-color: rgba(0, 0, 0, 0.4);
+          height: 100%;
+          padding: 20px;
+        }
+
+        & h4.ob-title {
+          margin-top: 35px;
+          font-size: 60px;
+          display: inline-block;
+          background: linear-gradient(to right, red, yellow, limegreen, blue);
+          -webkit-background-clip: text;
+          background-clip: text;
+          color: transparent;
+        }
+
+        & p span {
+          font-size: 25px;
+          color: red;
+        }
+      }
+    }
   }
 
   & .desserts-menu {
+    color: white;
     background: linear-gradient(135deg, #6c2a29, #861902, #c36408);
+    padding: 20px;
+    margin-top: 20px;
+
+    & .content {
+      background-color: rgba(0, 0, 0, 0.6);
+
+      & span.d1 {
+        color: #d59594;
+      }
+
+      & span.d2 {
+        color: #ae4800;
+      }
+    }
+  }
+}
+
+.container-img {
+  overflow: hidden;
+
+  & img {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+  }
+
+  & img:hover {
+    transform: scale(1.1);
   }
 }

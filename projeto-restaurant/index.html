@@ -54,12 +54,11 @@
         <div class="nav">
           <p><span>Taste.</span>it</p>
           <ul class="nav-links">
-            <li><a href="">Food</a></li>
-            <li><a href="">Drinks</a></li>
-            <li><a href="">Desserts</a></li>
-            <li><a href="">About</a></li>
-            <!-- <li>Reservation</li> -->
-            <li><a href="">Contact</a></li>
+            <li><a href="#menu">Food</a></li>
+            <li><a href="#drinks">Drinks</a></li>
+            <li><a href="#desserts">Desserts</a></li>
+            <li><a href="#register">Register</a></li>
+            <li><a href="#about">About</a></li>
           </ul>
           <p><i class="bx bx-like"></i></p>
         </div>
@@ -85,16 +84,18 @@
       <div class="container">
         <div class="favorites">
           <div class="single">
-            <img
-              src="images/steaks/main-steak.jpg"
-              alt="Grilled Steak accompanied by Pepper"
-            />
+            <div class="container-img">
+              <img
+                src="images/steaks/main-steak.jpg"
+                alt="Grilled Steak accompanied by Pepper"
+              />
+            </div>
             <div class="content">
               <div class="info">
                 <h3 class="steak"><span>fiery</span> steak</h3>
                 <p>
                   A steak grilled over hot coals, seasoned with seasonal peppers
-                  and our special spicy sauce 🌶️
+                  and our special spicy sauce 🌶️.
                 </p>
                 <div class="rate">
                   <div class="stars">
@@ -111,16 +112,18 @@
             </div>
           </div>
           <div class="single">
-            <img
-              src="images/chickens/main-chicken.jpg"
-              alt="Christmas Cester with Fruits"
-            />
+            <div class="container-img">
+              <img
+                src="images/chickens/main-chicken.jpg"
+                alt="Christmas Cester with Fruits"
+              />
+            </div>
             <div class="content">
               <div class="info">
                 <h3 class="chicken"><span>Christmas</span> Chester</h3>
                 <p>
                   Super seasoned Christmas chester accompanied by various fruits
-                  🍗
+                  🍗.
                 </p>
                 <div class="rate">
                   <div class="stars">
@@ -137,16 +140,18 @@
             </div>
           </div>
           <div class="single">
-            <img
-              src="images/doughs/main-dough.jpg"
-              alt="Bolognese Pasta with Tomato Sauce"
-            />
+            <div class="container-img">
+              <img
+                src="images/doughs/main-dough.jpg"
+                alt="Bolognese Pasta with Tomato Sauce"
+              />
+            </div>
             <div class="content">
               <div class="info">
                 <h3 class="dough">Bolognese <span>Pasta</span></h3>
                 <p>
                   Bolognese pasta with our delicious homemade natural tomato
-                  sauce (the same as the pizzas) 🍝
+                  sauce (the same as the pizzas) 🍝.
                 </p>
                 <div class="rate">
                   <div class="stars">
@@ -163,23 +168,25 @@
             </div>
           </div>
           <div class="single">
-            <img
-              src="images/drinks/main-drink.jpg"
-              alt="Bolognese Pasta with Tomato Sauce"
-            />
+            <div class="container-img">
+              <img
+                src="images/drinks/main-drink.jpg"
+                alt="Vodka drink accompanied by pink lemonade"
+              />
+            </div>
             <div class="content">
               <div class="info">
                 <h3 class="drink">
                   The <span>lady</span> of the <span>night</span>
                 </h3>
                 <p>
-                  our special drink for those who like an adrenaline rush in
-                  life ❤️‍🔥, this drink comes with vodka with cherry blossom
-                  liqueur and pink lemonade
+                  Our special drink for those who like adrenaline in life ❤️‍🔥,
+                  this drink comes with vodka with cherry liqueur and pink
+                  lemonade.
                 </p>
                 <p class="special">
                   And our special touch... it is purified and vaporized in
-                  extreme heat! <span>Face this?</span> 🔥
+                  extreme heat! <span>Face this?</span> 🔥.
                 </p>
               </div>
               <div class="rate">
@@ -196,16 +203,18 @@
             </div>
           </div>
           <div class="single">
-            <img
-              src="images/desserts/main-dessert.jpg"
-              alt="Bolognese Pasta with Tomato Sauce"
-            />
+            <div class="container-img">
+              <img
+                src="images/desserts/main-dessert.jpg"
+                alt="Caramel cheesecake with fleur de sel"
+              />
+            </div>
             <div class="content">
               <div class="info">
                 <h3 class="dessert">Chess <span>Cake</span></h3>
                 <p>
-                  our delicious whipped cream and caramel cheesecake with
-                  chestnuts and a touch of fleur de sel 🏵️
+                  Our delicious whipped cream and caramel cheesecake with
+                  chestnuts and a touch of fleur de sel 🏵️.
                 </p>
               </div>
               <div class="rate">
@@ -222,7 +231,7 @@
             </div>
           </div>
         </div>
-        <p>check the <span>price</span> of special dishes with the waiter!</p>
+        <p>Check the <span>price</span> of special dishes with the waiter!</p>
       </div>
     </section>
 
@@ -234,7 +243,7 @@
 
     <section id="menu">
       <div class="options">
-        <div id="servings-op" class="option">
+        <div id="servings-op" class="option selected">
           <i class="ri-bread-fill"></i>
           <span>Servings</span>
         </div>
@@ -254,54 +263,40 @@
           <i class="ri-knife-fill"></i>
           <span>Salads</span>
         </div>
-        <div id="drinks-op" class="option">
-          <i class="ri-goblet-fill"></i>
-          <span>Drinks</span>
-        </div>
-        <div id="desserts-op" class="option">
-          <i class="ri-cake-3-line"></i>
-          <span>Desserts</span>
-        </div>
       </div>
 
       <div id="servings" class="container">
         <div class="option">
-          <img
-            src="images/servings/serving01.jpg"
-            alt="Meat covered with our special house honey"
-          />
+          <img src="images/servings/serving01.jpg" alt="Chicken Wings" />
           <div class="content">
             <div class="price">
-              <h4>Main Dish Item</h4>
-              <span>R$ 35 ,00</span>
+              <h4>Chicken Wings</h4>
+              <span>$ 65,00</span>
             </div>
-            <p>Searsoned and handcarved to order.</p>
+            <p>North American style chicken wings.</p>
           </div>
         </div>
         <div class="option">
-          <img
-            src="images/servings/serving02.png"
-            alt="Meat covered with our special house honey"
-          />
+          <img src="images/servings/serving02.png" alt="French Fries" />
           <div class="content">
             <div class="price">
-              <h4>Main Dish Item</h4>
-              <span>R$ 35 ,00</span>
+              <h4>French Fries</h4>
+              <span>$ 50,00</span>
             </div>
-            <p>Searsoned and handcarved to order.</p>
+            <p>French fries accompanied by our special sauces.</p>
           </div>
         </div>
         <div class="option">
           <img
             src="images/servings/serving03.jpg"
-            alt="Meat covered with our special house honey"
+            alt="Cassavas with fine herbs"
           />
           <div class="content">
             <div class="price">
-              <h4>Main Dish Item</h4>
-              <span>R$ 35 ,00</span>
+              <h4>Cassavas</h4>
+              <span>$ 55,00</span>
             </div>
-            <p>Searsoned and handcarved to order.</p>
+            <p>Our portion of grilled cassava with fine herbs.</p>
           </div>
         </div>
       </div>
@@ -314,62 +309,62 @@
           />
           <div class="content">
             <div class="price">
-              <h4>Main Dish Item</h4>
-              <span>R$ 35 ,00</span>
+              <h4>Steak 01</h4>
+              <span>$ 170,00</span>
             </div>
-            <p>Searsoned and handcarved to order.</p>
+            <p>Our delicious grilled meat covered with our special honey.</p>
           </div>
         </div>
         <div class="option">
           <img
             src="images/steaks/steak02.jpg"
-            alt="Meat covered with our special house honey"
+            alt="Special steak with wine (1964)"
           />
           <div class="content">
             <div class="price">
-              <h4>Main Dish Item</h4>
-              <span>R$ 35 ,00</span>
+              <h4>Steak 02</h4>
+              <span>$ 160,00</span>
             </div>
-            <p>Searsoned and handcarved to order.</p>
+            <p>Our special steak accompanied with one of our wines (1964).</p>
           </div>
         </div>
         <div class="option">
           <img
             src="images/steaks/steak03.jpg"
-            alt="Meat covered with our special house honey"
+            alt="Steak grilled in butter with fat fried in bacon juice"
           />
           <div class="content">
             <div class="price">
-              <h4>Main Dish Item</h4>
-              <span>R$ 35 ,00</span>
+              <h4>Steak 03</h4>
+              <span>$ 140,00</span>
             </div>
-            <p>Searsoned and handcarved to order.</p>
+            <p>Steak grilled in butter with fat fried in bacon juice.</p>
           </div>
         </div>
         <div class="option">
           <img
             src="images/steaks/steak04.jpg"
-            alt="Meat covered with our special house honey"
+            alt="Sirloin steak accompanied by green beans and barbecue sauce"
           />
           <div class="content">
             <div class="price">
-              <h4>Main Dish Item</h4>
-              <span>R$ 35 ,00</span>
+              <h4>Steak 04</h4>
+              <span>$ 150,00</span>
             </div>
-            <p>Searsoned and handcarved to order.</p>
+            <p>Sirloin steak accompanied by green beans and barbecue sauce.</p>
           </div>
         </div>
         <div class="option">
           <img
             src="images/steaks/steak05.jpg"
-            alt="Meat covered with our special house honey"
+            alt="Baby steak accompanied with vegetables grilled in butter"
           />
           <div class="content">
             <div class="price">
-              <h4>Main Dish Item</h4>
-              <span>R$ 35 ,00</span>
+              <h4>Steak 05</h4>
+              <span>$ 130,00</span>
             </div>
-            <p>Searsoned and handcarved to order.</p>
+            <p>Baby steak accompanied with vegetables grilled in butter.</p>
           </div>
         </div>
       </div>
@@ -378,14 +373,14 @@
         <div class="option">
           <img
             src="images/chickens/chicken01.jpg"
-            alt="Meat covered with our special house honey"
+            alt="Grilled chicken with vegetables"
           />
           <div class="content">
             <div class="price">
-              <h4>Main Dish Item</h4>
-              <span>R$ 35 ,00</span>
+              <h4>Chicken 01</h4>
+              <span>$ 140,00</span>
             </div>
-            <p>Searsoned and handcarved to order.</p>
+            <p>Grilled chicken with vegetables.</p>
           </div>
         </div>
         <div class="option">
@@ -395,10 +390,10 @@
           />
           <div class="content">
             <div class="price">
-              <h4>Main Dish Item</h4>
-              <span>R$ 35 ,00</span>
+              <h4>Chicken 02</h4>
+              <span>$ 125,00</span>
             </div>
-            <p>Searsoned and handcarved to order.</p>
+            <p>Roast chicken with fine herbs.</p>
           </div>
         </div>
       </div>
@@ -407,27 +402,27 @@
         <div class="option">
           <img
             src="images/doughs/dough01.jpg"
-            alt="Meat covered with our special house honey"
+            alt="Special lasagna with minced meat and sealed cheese"
           />
           <div class="content">
             <div class="price">
-              <h4>Main Dish Item</h4>
-              <span>R$ 35 ,00</span>
+              <h4>Dough 01</h4>
+              <span>$ 95,00</span>
             </div>
-            <p>Searsoned and handcarved to order.</p>
+            <p>Special lasagna with minced meat and sealed cheese.</p>
           </div>
         </div>
         <div class="option">
           <img
             src="images/doughs/dough02.jpg"
-            alt="Meat covered with our special house honey"
+            alt="Pasta with meatballs grilled in bacon fat."
           />
           <div class="content">
             <div class="price">
-              <h4>Main Dish Item</h4>
-              <span>R$ 35 ,00</span>
+              <h4>Dough 02</h4>
+              <span>$ 80,00</span>
             </div>
-            <p>Searsoned and handcarved to order.</p>
+            <p>Pasta with meatballs grilled in bacon fat.</p>
           </div>
         </div>
       </div>
@@ -440,10 +435,10 @@
           />
           <div class="content">
             <div class="price">
-              <h4>Main Dish Item</h4>
-              <span>R$ 35 ,00</span>
+              <h4>Salad 01</h4>
+              <span>$ 45,00</span>
             </div>
-            <p>Searsoned and handcarved to order.</p>
+            <p>Tropical Salad.</p>
           </div>
         </div>
         <div class="option">
@@ -453,10 +448,10 @@
           />
           <div class="content">
             <div class="price">
-              <h4>Main Dish Item</h4>
-              <span>R$ 35 ,00</span>
+              <h4>Salad 02</h4>
+              <span>$ 20,00 * 4</span>
             </div>
-            <p>Searsoned and handcarved to order.</p>
+            <p>Vegetables on a stick.</p>
           </div>
         </div>
         <div class="option">
@@ -466,10 +461,10 @@
           />
           <div class="content">
             <div class="price">
-              <h4>Main Dish Item</h4>
-              <span>R$ 35 ,00</span>
+              <h4>Salad 03</h4>
+              <span>$ 35,00</span>
             </div>
-            <p>Searsoned and handcarved to order.</p>
+            <p>Dutch Salad.</p>
           </div>
         </div>
       </div>
@@ -485,40 +480,48 @@
         </div>
         <div class="menu drinks-menu">
           <div class="content">
-            <img src="images/drinks/main-drink02.jpg" alt="#" />
+            <div class="container-img">
+              <img
+                src="images/drinks/main-drink02.jpg"
+                alt="Drink with vodka and pink lemonade"
+              />
+            </div>
             <div class="price">
-              <h4>Cherry <span class="d1">Blossom</span></h4>
+              <h4>Cherry <span class="b1">Blossom</span></h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Corrupti harum debitis, deleniti autem obcaecati repudiandae.
-                Veniam, autem rem ut officia expedita ad illo, sunt, praesentium
-                quo quibusdam veritatis! Nisi, atque.
+                For those who just want to enjoy the drink, we also have a lite
+                version, just with vodka and pink lemonade.
               </p>
             </div>
           </div>
           <div class="content">
-            <img src="images/drinks/beer.jpg" alt="#" />
+            <div class="container-img">
+              <img src="images/drinks/beer.jpg" alt="Craft beer" />
+            </div>
             <div class="price">
-              <h4>divine <span class="d2">beer</span></h4>
+              <h4>Divine <span class="b2">Beer</span></h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Corrupti harum debitis, deleniti autem obcaecati repudiandae.
-                Veniam, autem rem ut officia expedita ad illo, sunt, praesentium
-                quo quibusdam veritatis! Nisi, atque.
+                And a more masculine drink of ours, our craft beer created in
+                barrels for months, the house tradition.
               </p>
             </div>
           </div>
           <div class="content openbar">
-            <img src="images/drinks/openbar-drinks.jpg" alt="#" />
+            <div class="container-img">
+              <img src="images/drinks/openbar-drinks.jpg" alt="Open bar" />
+            </div>
             <!-- special -->
             <div class="price">
-              <h4 class="ob-title">Open Bar</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Corrupti harum debitis, deleniti autem obcaecati repudiandae.
-                Veniam, autem rem ut officia expedita ad illo, sunt, praesentium
-                quo quibusdam veritatis! Nisi, atque.
-              </p>
+              <div class="background">
+                <h4 class="ob-title">Open Bar!</h4>
+                <p>
+                  This is our <br />
+                  <span>Open Bar!</span> <br />
+                  For just <br />
+                  <span>$150</span> <br />
+                  you can enjoy all of our drinks!
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -534,32 +537,39 @@
         </div>
         <div class="menu desserts-menu">
           <div class="content">
-            <img src="images/desserts/dessert01.jpg" alt="#" />
+            <div class="container-img">
+              <img
+                src="images/desserts/dessert01.jpg"
+                alt="Strawberry pie with peanuts and fleur de lis"
+              />
+            </div>
             <div class="price">
-              <h4>Cherry Blossom</h4>
+              <h4><span class="d1">Strawberry</span> Pie</h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Corrupti harum debitis, deleniti autem obcaecati repudiandae.
-                Veniam, autem rem ut officia expedita ad illo, sunt, praesentium
-                quo quibusdam veritatis! Nisi, atque.
+                Our delicious strawberry pie with peanuts and fleurs de lis.
               </p>
             </div>
           </div>
           <div class="content">
-            <img src="images/desserts/dessert02.jpg" alt="#" />
+            <div class="container-img">
+              <img src="images/desserts/dessert02.jpg" alt="Caramel pudding" />
+            </div>
             <div class="price">
-              <h4>Cherry Blossom</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Corrupti harum debitis, deleniti autem obcaecati repudiandae.
-                Veniam, autem rem ut officia expedita ad illo, sunt, praesentium
-                quo quibusdam veritatis! Nisi, atque.
-              </p>
+              <h4>Caramel <span class="d2">Pudding</span></h4>
+              <p>Caramel pudding full of topping!!!</p>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <div class="separator register-separator">
+      <i class="ri-bard-line"></i>
+      <h2>Register</h2>
+      <i class="ri-bard-line"></i>
+    </div>
+
+    <section id="register"></section>
 
     <script src="script.js"></script>
   </body>
