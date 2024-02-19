@@ -112,16 +112,29 @@ a {
   list-style: none;
   display: flex;
   gap: 70px;
-  font-weight: 600;
-  font-size: 18px;
 }
 
 #hero header .nav ul.nav-links a {
-  transition: color 0.3s ease;
+  position: relative;
+  font-weight: 600;
+  font-size: 20px;
 }
 
-#hero header .nav ul.nav-links a:hover {
-  color: var(--red01);
+#hero header .nav ul.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--red01);
+  border-radius: 10px;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+#hero header .nav ul.nav-links a:hover::after {
+  transform: scaleX(1);
 }
 
 #hero header .nav i {
@@ -171,7 +184,7 @@ a {
 #hero .title a i {
   display: block;
   font-size: 20px;
-  line-height: 10px;
+  line-height: 15px;
   animation: levitating 3s forwards infinite;
 }
 
@@ -286,31 +299,36 @@ a {
   color: var(--red01);
 }
 
-#highlights .container .single .content .rate {
+#highlights .container .single .content .rate,
+.special-container .rate {
   margin: 15px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-#highlights .container .single .content .rate .stars {
+#highlights .container .single .content .rate .stars,
+.special-container .rate .stars {
   display: flex;
   align-items: center;
   gap: 5px;
 }
 
-#highlights .container .single .content .rate .stars i {
+#highlights .container .single .content .rate .stars i,
+.special-container .rate .stars i {
   font-size: 18px;
   color: yellow;
 }
 
-#highlights .container .single .content .rate .favorite i {
+#highlights .container .single .content .rate .favorite i,
+.special-container .rate .favorite i {
   font-size: 20px;
   transition: color 0.3s ease;
   cursor: pointer;
 }
 
-#highlights .container .single:hover .content .rate .favorite i:hover {
+#highlights .container .single:hover .content .rate .favorite i:hover,
+.special-container .rate .favorite i:hover {
   color: red;
 }
 
@@ -422,6 +440,11 @@ a {
   align-items: center;
   padding: 20px;
   border: 2px solid rgba(0, 0, 0, 0.2);
+  transition: transform .3s ease;
+}
+
+#menu .container .option:hover {
+  transform: scale(1.05);
 }
 
 #menu .container .option .content {
@@ -523,9 +546,22 @@ a {
         padding: 20px;
       }
 
-      & h4 {
-        font-size: 30px;
+      & .title {
         margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & h4 {
+          font-size: 30px;
+        }
+
+        & span:nth-child(2) {
+          font-family: var(--rochester);
+          font-size: 25px;
+          font-weight: 600;
+          color: var(--red01);
+        }
       }
     }
   }
