@@ -194,23 +194,20 @@ a {
   animation: levitating 3s forwards infinite;
 }
 
-.main-separator {
-  margin-top: 8%;
-}
-
 .separator {
   text-align: center;
-  margin: 3% 0;
+  margin: 5% 0;
 }
 
 .separator h2 {
   color: var(--red01);
   font-family: var(--rochester);
   font-size: 85px;
+  margin-bottom: 15px;
 }
 
 .separator h3 {
-  margin: 10px 0 20px 0;
+  margin-block: -10px 20px;
 }
 
 .separator i {
@@ -218,7 +215,7 @@ a {
 }
 
 #highlights {
-  padding: 50px;
+  padding: 0 50px;
 }
 
 #highlights .container {
@@ -522,8 +519,6 @@ a {
       & h2 {
         font-size: 40px;
         text-shadow: 1px 1px 10px rgba(0, 0, 0, 1);
-        border-bottom: 1px solid white;
-        line-height: 40px;
       }
 
       & i {

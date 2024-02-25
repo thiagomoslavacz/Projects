@@ -1,12 +1,123 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
+    <!-- META-TAGS -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ICONS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <!-- TITLE -->
     <title>Taste.it Pizza</title>
+    <!-- STYLE -->
+    <style>
+      @keyframes rotatePizza {
+        from {
+          transform: rotate(360deg);
+        }
+
+        to {
+          transform: rotate(0deg);
+        }
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        position: relative;
+        background: black url("images/backgrounds/background-pizza-desktop.jpg")
+          no-repeat 100%;
+        background-size: cover;
+      }
+
+      a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 10px 0 0 10px;
+        font-size: 50px;
+        color: white;
+        transition: opacity 0.3s ease;
+      }
+
+      a:hover {
+        opacity: 0.7;
+      }
+
+      .wrapper {
+        background-color: rgba(0, 0, 0, 0.3);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+      }
+
+      .wrapper-img img {
+        width: 300px;
+        vertical-align: bottom;
+        animation: rotatePizza 7s linear infinite;
+      }
+
+      .wrapper-content {
+        color: white;
+
+        & h1 {
+          font-size: 50px;
+          margin-bottom: 20px;
+          background-color: rgba(0, 0, 0, 0.5);
+          text-shadow: 10px 10px 10px black;
+          border-bottom: 1px solid white;
+          border-left: 1px solid white;
+          padding: 10px 20px;
+
+          & span {
+            color: #d00000;
+          }
+        }
+
+        & .paragraph {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 5px;
+
+          & p,
+          i {
+            font-size: 30px;
+          }
+
+          p {
+            border-bottom: 2px solid #d00000;
+            line-height: 45px;
+          }
+        }
+      }
+    </style>
   </head>
   <body>
-    <h1>Shortly</h1>
-    <a href="index.html">Back to Taste.it Restaurant</a>
+    <div class="wrapper">
+      <a href="index.html"><i class="bx bx-x"></i></a>
+      <div class="wrapper-img">
+        <img src="images/backgrounds/pizza.png" alt="Pizza" />
+      </div>
+      <div class="wrapper-content">
+        <h1><span>Taste</span>.it Pizzaria</h1>
+        <div class="paragraph">
+          <i class="bx bx-chevron-left"></i>
+          <p>Shortly!</p>
+          <i class="bx bx-chevron-right"></i>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
