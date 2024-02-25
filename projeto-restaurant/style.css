@@ -155,6 +155,10 @@ a {
   color: yellow;
 }
 
+#hero header .nav i#liked {
+  display: none;
+}
+
 #hero .title {
   text-align: center;
   display: grid;
@@ -327,16 +331,26 @@ a {
   color: yellow;
 }
 
-#highlights .container .single .content .rate .favorite i,
-.special-container .rate .favorite i {
+i.favorite,
+i.favorited {
+  color: red;
   font-size: 20px;
   transition: color 0.3s ease;
   cursor: pointer;
 }
 
-#highlights .container .single:hover .content .rate .favorite i:hover,
-.special-container .rate .favorite i:hover {
-  color: red;
+i.favorited {
+  font-size: 20px;
+  display: none;
+  cursor: pointer;
+}
+
+.special-container .drinks-menu i.favorite {
+  color: black;
+}
+
+.special-container .desserts-menu i.favorite {
+  color: white;
 }
 
 #highlights .container .single img {
