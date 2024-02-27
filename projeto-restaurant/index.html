@@ -90,7 +90,7 @@
     </div>
 
     <section id="highlights">
-      <div class="container">
+      <div class="container-highlights">
         <div class="favorites">
           <div class="single">
             <div class="container-img">
@@ -257,23 +257,31 @@
 
     <section id="menu">
       <div class="options">
-        <div id="servings-op" class="option selected">
+        <div
+          id="servings-op"
+          class="option selected"
+          onclick="showMenu('servings', this)"
+        >
           <i class="ri-bread-fill"></i>
           <span>Servings</span>
         </div>
-        <div id="steaks-op" class="option">
+        <div id="steaks-op" class="option" onclick="showMenu('steaks', this)">
           <i class="ri-restaurant-fill"></i>
           <span>Steaks</span>
         </div>
-        <div id="chickens-op" class="option">
+        <div
+          id="chickens-op"
+          class="option"
+          onclick="showMenu('chickens', this)"
+        >
           <i class="ri-restaurant-2-fill"></i>
           <span>Chickens</span>
         </div>
-        <div id="doughs-op" class="option">
+        <div id="doughs-op" class="option" onclick="showMenu('doughs', this)">
           <i class="ri-bowl-fill"></i>
           <span>Doughs</span>
         </div>
-        <div id="salads-op" class="option">
+        <div id="salads-op" class="option" onclick="showMenu('salads', this)">
           <i class="ri-knife-fill"></i>
           <span>Salads</span>
         </div>

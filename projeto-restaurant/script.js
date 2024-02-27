@@ -6,13 +6,6 @@ const likedIcon = document.getElementById("liked");
 const favoriteIcon = document.querySelectorAll(".favorite");
 const favoritedIcon = document.querySelectorAll(".favorited");
 
-// Var's Menu
-const servings = document.getElementById("servings-op");
-const steak = document.getElementById("steaks-op");
-const chickens = document.getElementById("chickens-op");
-const doughs = document.getElementById("doughs-op");
-const salads = document.getElementById("salads-op");
-
 // Function's Like
 
 function liked() {
@@ -46,3 +39,24 @@ document.querySelectorAll(".favorited").forEach((icon) => {
 });
 
 // Function's Menu
+
+function showMenu(category, element) {
+  // Oculta todas as seções de menu
+  var menuSections = document.querySelectorAll(".container");
+  menuSections.forEach((section) => {
+    section.style.display = "none";
+  });
+
+  // Remove a classe "selected" de todos os elementos de opção
+  var options = document.querySelectorAll(".option");
+  options.forEach((option) => {
+    option.classList.remove("selected");
+  });
+
+  // Exibe a seção do menu correspondente à categoria clicada
+  var selectedSection = document.getElementById(category);
+  selectedSection.style.display = "grid";
+
+  // Adiciona a classe "selected" ao elemento de opção clicado
+  element.classList.add("selected");
+}
