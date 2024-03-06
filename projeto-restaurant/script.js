@@ -60,3 +60,30 @@ function showMenu(category, element) {
   // Adiciona a classe "selected" ao elemento de opção clicado
   element.classList.add("selected");
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const menuButton = document.getElementById("menu-button");
+  const menuWindow = document.getElementById("menu-window");
+
+  menuButton.addEventListener("click", function () {
+    if (menuWindow.classList.contains("closed")) {
+      menuWindow.classList.remove("closed");
+      menuButton.textContent = "Fechar Menu";
+      menuButton.innerHTML = '<i class="bx bx-x"></i>';
+    } else {
+      menuWindow.classList.add("closed");
+      menuButton.textContent = "Abrir Menu";
+      menuButton.innerHTML = '<i class="bx bx-menu"></i>';
+    }
+  });
+
+  const menuLinks = menuWindow.querySelectorAll("a");
+
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", function () {
+      menuWindow.classList.add("closed");
+      menuButton.textContent = "Abrir Menu";
+      menuButton.innerHTML = '<i class="bx bx-menu"></i>';
+    });
+  });
+});

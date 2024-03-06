@@ -167,8 +167,6 @@ a {
   display: none;
 }
 
-
-
 #hero .title {
   text-align: center;
   display: grid;
@@ -239,7 +237,7 @@ a {
   background-size: cover;
 }
 
-#highlights .container-highlights .favorites {
+#highlights .container-highlights .wrapper {
   padding: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -384,7 +382,7 @@ i.favorited {
 
 #menu .options {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 50px;
 }
 
@@ -493,17 +491,6 @@ i.favorited {
 #menu .container .option .price h4 {
   font-size: 20px;
   font-weight: 600;
-}
-
-#menu .container .option .price h4::after {
-  content: "";
-  position: absolute;
-  display: inline-block;
-  width: 110px;
-  height: 1px;
-  margin-left: 10px;
-  margin-top: 15px;
-  background-color: rgba(128, 128, 128, 0.5);
 }
 
 #menu .container .option .price span {
@@ -683,11 +670,12 @@ i.favorited {
   padding: 0 75px;
   background-color: #f5f5f5;
   display: flex;
+  align-items: center;
 
   & .form {
     background-color: red;
     color: white;
-    padding: 40px 30px 20px 30px;
+    padding: 40px 30px;
     margin-right: 75px;
     width: 500px;
 
@@ -955,10 +943,6 @@ footer {
     background-image: url("images/backgrounds/main-background-phone.jpg");
   }
 
-  #hero {
-    
-  }
-
   #hero header .info {
     display: none;
   }
@@ -980,8 +964,7 @@ footer {
   #hero header .nav .wrap {
     display: flex;
     align-items: center;
-    gap: 25px;
-    margin-right: 20px;
+    gap: 15px;
   }
 
   #hero header .nav #menu-button {
@@ -1012,5 +995,166 @@ footer {
 
   .separator h3 {
     font-size: 15px;
+  }
+
+  #highlights {
+    padding: 0;
+  }
+
+  #highlights .container-highlights .wrapper {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  #highlights .container-highlights .wrapper .single {
+    padding: 20px 0;
+  }
+
+  #highlights .container-highlights .wrapper .single .content {
+    padding-inline: 20px;
+  }
+
+  #highlights .container-highlights .wrapper .single .content .info h3 {
+    line-height: 40px;
+  }
+
+  #menu {
+    padding: 0;
+  }
+
+  #menu .options {
+    gap: 25px;
+    padding: 50px 25px;
+  }
+
+  #menu .container {
+    grid-template-columns: 1fr;
+    margin: 0;
+  }
+
+  #menu .container .option {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 0 20px 0;
+  }
+
+  #menu .container .option img {
+    width: 100%;
+  }
+
+  #menu .drinks-ct {
+    margin: 20% 0;
+  }
+
+  #menu .special-container .menu {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px 10px;
+  }
+
+  #menu .special-container .drinks-menu {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #menu .special-container .drinks-menu .openbar {
+    grid-template-columns: 1fr;
+  }
+
+  #menu .special-container .drinks-menu .openbar .price .background .ob-title {
+    font-size: 50px;
+    margin: 0;
+  }
+
+  #reservation {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  #reservation .form {
+    padding: 40px;
+    margin: 0;
+    width: 100%;
+  }
+
+  #reservation .content {
+    flex-direction: column;
+    padding: 30px 0 0 20px;
+    width: 100%;
+  }
+
+  #reservation .content img.chief {
+    width: 350px;
+  }
+
+  .parallax {
+    margin: 15% 0;
+  }
+
+  .parallax .content h2 {
+    font-size: 25px;
+  }
+
+  .parallax .content h1 {
+    font-size: 50px;
+  }
+
+  .prop {
+    padding: 75px 0 75px 20px;
+  }
+
+  .prop h1 {
+    margin-bottom: 25px;
+  }
+
+  footer {
+    grid-template-columns: 1fr;
+  }
+
+  footer .col h2 {
+    margin-bottom: 30px;
+  }
+
+  footer .col03 {
+    margin: 0;
+  }
+
+  a.toTop i {
+    font-size: 40px;
+  }
+
+  #menu-window.closed {
+    left: 100%;
+  }
+
+  #menu-window {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background: black url("images/backgrounds/main-background-phone.jpg")
+      no-repeat center;
+    background-size: cover;
+    transition: left 0.3s ease;
+  }
+
+  #menu-window .content {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+  }
+
+  #menu-window .nav-links li {
+    list-style: none;
+    font-size: 30px;
+    margin: 0 0 20px 20px;
+  }
+
+  #menu-window img {
+    width: 100px;
   }
 }
