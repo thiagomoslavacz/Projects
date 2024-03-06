@@ -592,7 +592,6 @@ i.favorited {
     }
 
     & .openbar {
-      background-color: black;
       grid-column: span 2;
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -602,6 +601,7 @@ i.favorited {
       & .price {
         background: url("images/backgrounds/openbar-background.jpg") no-repeat
           100%;
+        height: 100%;
         background-size: cover;
         padding: 0;
         color: white;
@@ -712,18 +712,41 @@ i.favorited {
     }
 
     & button[type="submit"] {
-      border: 1px solid black;
-      background-color: white;
+      position: relative;
+      border: 1px solid white;
+      color: white;
+      background-color: transparent;
       margin-top: 20px;
+      padding: 20px 30px;
       width: 100%;
-      height: 60px;
       font-size: 20px;
       border-radius: 5px;
       cursor: pointer;
+      overflow: hidden;
+      z-index: 1;
+      transition: color 0.5s ease;
+    }
+
+    & button[type="submit"]::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background-color: white;
+      transform: skewX(45deg);
+      transform-origin: left bottom;
+      transition: width 0.5s ease;
+      z-index: -1;
     }
 
     & button[type="submit"]:hover {
-      background-color: #f5f5f5;
+      color: black;
+    }
+
+    & button[type="submit"]:hover::before {
+      width: 100%;
     }
   }
 
@@ -931,6 +954,10 @@ footer {
   }
 }
 
+#menu-window {
+  display: none;
+}
+
 @media screen and (max-width: 1150px) {
 }
 
@@ -1040,6 +1067,7 @@ footer {
 
   #menu .container .option img {
     width: 100%;
+    transform: scale(1.1);
   }
 
   #menu .drinks-ct {
@@ -1130,6 +1158,7 @@ footer {
   }
 
   #menu-window {
+    display: block;
     position: fixed;
     top: 0;
     left: 0;
