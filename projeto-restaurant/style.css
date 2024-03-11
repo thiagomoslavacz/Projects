@@ -484,7 +484,6 @@ i.favorited {
 #menu .container .option .content .price {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   margin-bottom: 10px;
 }
 
@@ -958,7 +957,121 @@ footer {
   display: none;
 }
 
+@media screen and (max-width: 1450px) {
+  footer .col03 {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 1270px) {
+  #highlights .container-highlights .single .content {
+    padding: 30px;
+  }
+}
+
 @media screen and (max-width: 1150px) {
+  #highlights .container-highlights .single .content {
+    padding: 0 30px;
+  }
+
+  #menu .container .option .price {
+    flex-direction: column;
+  }
+
+  #reservation .content img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  #hero header .info {
+    flex-direction: column;
+  }
+
+  #hero header .nav ul.nav-links {
+    gap: 50px;
+  }
+
+  #highlights .container-highlights .single .content .info h3,
+  #highlights .container-highlights .single .content .info p {
+    padding: 10px 0;
+  }
+
+  #menu {
+    padding-inline: 50px;
+  }
+
+  footer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 75px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  #hero header .nav ul.nav-links {
+    display: none;
+  }
+
+  #hero header .nav .wrap {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  #hero header .nav #menu-button {
+    display: flex;
+  }
+
+  #menu-window.closed {
+    left: 100%;
+  }
+
+  #menu-window {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background: black url("images/backgrounds/main-background-phone.jpg")
+      no-repeat center;
+    background-size: cover;
+    transition: left 0.3s ease;
+  }
+
+  #menu-window .content {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+  }
+
+  #menu-window .nav-links li {
+    list-style: none;
+    font-size: 30px;
+    margin: 0 0 20px 20px;
+  }
+
+  #menu-window img {
+    width: 100px;
+  }
+
+  #highlights .container-highlights .single .content {
+    padding: 0 10px;
+  }
+
+  #menu {
+    padding-inline: 30px;
+  }
+
+  #menu .container .option {
+    flex-direction: column;
+  }
+
+  #menu .container img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -1062,12 +1175,10 @@ footer {
   #menu .container .option {
     flex-direction: column;
     gap: 20px;
-    padding: 0 0 20px 0;
   }
 
   #menu .container .option img {
     width: 100%;
-    transform: scale(1.1);
   }
 
   #menu .drinks-ct {
